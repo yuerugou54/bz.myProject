@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="sayHello" class="com.mxd.sayhellobeans.SayHello">
+        <property name="name" value="maxiaodong"/>
+        <property name="age" value="20"/>
+        <constructor-arg name="askStatus" ref="askStatus"/>
+        <property name="dataApp" ref="dataApp"></property>
+    </bean>
+
+    <bean id="askStatus" class="com.mxd.sayhellobeans.AskStatus">
+        <property name="name" value="你爸爸"/>
+    </bean>
+
+    <bean id="dataApp" class="com.mxd.dataappbeans.DataApp">
+        <property name="depositon" value="国正中心"/>
+    </bean>
+
+</beans>
