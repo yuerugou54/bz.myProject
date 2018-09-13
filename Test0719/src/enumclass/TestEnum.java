@@ -7,19 +7,19 @@ package enumclass;
  * Desc   :测试枚举类
  */
 public enum TestEnum {
-    MONDAY(1, "周一",1),
-    TUESDATY(2, "周二",2),
-    TUESCATY(3,"周三",1),
-    FRIDAY(5,"周五",1);
+    MONDAY(1, "周一", 1),
+    TUESDATY(2, "周二", 2),
+    TUESCATY(3, "周三", 1),
+    FRIDAY(5, "周五", 1);
 
-    String desc;
-    int num;
-    int level;
+    final String desc;
+    final int num;
+    final int level;
 
-    TestEnum(int num, String desc,int level) {
+    TestEnum(int num, String desc, int level) {
         this.num = num;
         this.desc = desc;
-        this.level=level;
+        this.level = level;
     }
 
     public String getDesc() {
@@ -40,7 +40,7 @@ public enum TestEnum {
     public static void main(String[] args) {
         TestEnum[] testEnum = TestEnum.values();
         for (TestEnum single : testEnum) {
-            System.out.println(single.getDeclaringClass().getClassLoader()+","+single.name()+":"+single.num + ":" + single.desc);
+            System.out.println(single.getDeclaringClass().getClassLoader() + "," + single.name() + ":" + single.num + ":" + single.desc);
         }
         System.out.println(MONDAY.getDesc());
         System.out.println(TestEnum.valueOf(TestEnum.TUESDATY.toString()).getNum());
